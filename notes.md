@@ -6,6 +6,7 @@
 * Wizards cast spells.
 * Wizards take damage.
 * Wizards die when they run out of health.
+* Wizards do NOT die when their health is > 0.
 * Wizards have a status.
 
 * Additional stuff:

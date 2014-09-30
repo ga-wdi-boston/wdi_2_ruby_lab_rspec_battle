@@ -8,7 +8,7 @@ describe Wizard do
   end
 
   it "has health" do
-    expect(@wizard.attributes).to include(:health)
+    expect(@wizard).to respond_to(:health)
   end
 
   it "starts with 50 health" do
@@ -16,7 +16,7 @@ describe Wizard do
   end
 
   it "has spells" do
-    expect(@wizard.attributes).to include(:spells)
+    expect(@wizard).to respond_to(:spells)
   end
 
   it "casts spells" do
@@ -36,8 +36,14 @@ describe Wizard do
     expect(@wizard.dead?).to be true
   end
 
+  it "does not die when its health is greater than 0" do
+    @wizard.take_damage(@initial_health - 1)
+
+    expect(@wizard.dead?).to be false
+  end
+
   it "has a status" do
-    expect(@wizard.attributes).to include(:status)
+    expect(@wizard).to respond_to(:status)
   end
 
 end
