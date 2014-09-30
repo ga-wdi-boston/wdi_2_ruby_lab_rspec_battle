@@ -40,3 +40,17 @@
 
 * Blizzard, Rockslide, Waterfall, Lightning, Fireball, Healing, Darkness, Barrier.
 
+
+
+Possible effects for a spell:
+
+It
+
+  * damages a target
+  * heals the caster
+  * combos on a target
+  * cancels a spell
+  * freezes a target
+  * soaks a target
+  * sets a target on fire
+  *

@@ -31,7 +31,7 @@ describe Wizard do
   it "casts spells" do
     @wizard.spells = [:spell]
     @wizard.cast_spell(:spell)
-    expect(@wizard).to respond_to(:cast_spell)
+    expect(@wizard).to respond_to(:cast_spell)  # how should I test for this???
   end
 
   it "takes damage" do
