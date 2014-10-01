@@ -53,4 +53,28 @@ It
   * freezes a target
   * soaks a target
   * sets a target on fire
-  *
+  * uh.
+
+Should I really be making a class for Spells? To be honest, it's really more like every time a Wizard casts a spell, it does a specific action. They resemble methods, almost:
+
+    def fireball
+      if target.status == :on_fire
+        target.take_damage(20)
+      else
+        target.take_damage(10)
+        target.status = :on_fire
+      end
+      if target.cast_spell = :blizzard
+        target.cast_spell.cancel
+      end
+    end
+
+    def blizzard
+      target.take_damage(10)
+      target.status = :frozen
+      if target.cast_spell = :waterfall
+        target.cast_spell.cancel
+      end
+    end
+
+What's a good way to make it so I don't have to write a bunch of methods!?
